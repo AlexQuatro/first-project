@@ -12,22 +12,25 @@
 		<header class="header">
 			<div class="container">
 				<div class="header__block">
-					<div class="header__logo">
-						<img src="img/logo/logo.png" alt="">
-					</div>
+					<a href="#" class="header__logo"><img src="img/logo/logo.png" alt=""></a>
 					<div class="header__menu">
-						<ul class="header__list">
-							<li><a href="#" class="header__link">Home</a></li>
-							<li><a href="#" class="header__link">About</a></li>
-							<li><a href="#" class="header__link">Service</a></li>
-							<li><a href="#" class="header__link">Contact</a></li>
-						</ul>
+						<div class="header__icon">
+							<span></span>
+						</div>
+						<nav class="header__body">
+							<ul class="header__list">
+								<li><a href="#" class="header__link">Home</a></li>
+								<li><a href="#" class="header__link">About</a></li>
+								<li><a href="#" class="header__link">Service</a></li>
+								<li><a href="#" class="header__link">Contact</a></li>
+							</ul>
+						</nav>
 					</div>
 					<div class="header__search">
 						<form class="search">
 							<input type="text" class="search__form" placeholder="Search..">
-							<button type="reset" class="search__button"><img src="img/icons/Search_Button.svg" alt=""></button>
-							<i class="fa fa-search"></i>
+							<button type="reset" class="search__button">
+								<i class="fa fa-search"></i>
 						</form>
 					</div>
 				</div>
@@ -377,5 +380,6 @@
 		</footer>
 	</main>
 	<script src="js/script_ibg.js"></script>
+	<script src="js/script_burger.js"></script>
 </body>
 </html>

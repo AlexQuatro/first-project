@@ -230,6 +230,9 @@ body {
       -ms-flex-align: center;
           align-items: center;
 }
+.screen__img {
+  margin-top: 7%;
+}
 .screen__block {
   max-width: 690px;
 }

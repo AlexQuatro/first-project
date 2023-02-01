@@ -25,11 +25,10 @@ const isMmobile = {
 			isMmobile.Windows());
 	}
 };
-
 if (isMmobile.any()) {
 	document.body.classList.add('_touch');
 
-	let menuArrows = document.querySelectorAll('.header__arrow');
+	let menuArrows = document.querySelectorAll('.menu__title');
 	if (menuArrows.length>0) {
 		for (let index = 0; index < menuArrows.length; index++) {
 			const menuArrow = menuArrows[index];
@@ -42,7 +41,6 @@ if (isMmobile.any()) {
 } else {
 	document.body.classList.add('_pc');
 }
-
 const iconMenu = document.querySelector('.header__icon');
 const menuBody = document.querySelector('.header__body');
 if (iconMenu) {

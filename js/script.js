@@ -25,19 +25,27 @@ const isMmobile = {
 			isMmobile.Windows());
 	}
 };
-if (isMmobile.any()) {
-	document.body.classList.add('_touch');
+// if (isMmobile.any()) {
+// 	document.body.classList.add('_touch');
 
-	let menuArrows = document.querySelectorAll('.menu__title');
-	if (menuArrows.length>0) {
-		for (let index = 0; index < menuArrows.length; index++) {
-			const menuArrow = menuArrows[index];
-			menuArrow.addEventListener("click", function (e) {
-				menuArrow.parentElement.classList.toggle('_active');
-			})
-		}
-	}
-
+// 	let menuArrows = document.querySelectorAll(".menu__title");
+// 	if (menuArrows.length>0) {
+// 		for (let index = 0; index < menuArrows.length; index++) {
+// 			const menuArrow = menuArrows[index];
+// 			menuArrow.addEventListener("click", function (e) {
+// 				menuArrow.parentElement.classList.toggle("_active");
+// 			})
+// 		}
+// 	}
+var header = document.getElementById(".menu__title");
+var btns = header.getElementsByClassName("menu__list");
+for (var i = 0; i < menu__lists.length; i++) {
+	menu__lists[i].addEventListener("click", function() {
+	var current = document.getElementsByClassName("_active");
+	current[0].className = current[0].className.replace("_active", "");
+	this.className += "_active";
+	});
+}
 } else {
 	document.body.classList.add('_pc');
 }

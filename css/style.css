@@ -1471,7 +1471,7 @@ body._lock {
     right: 0;
     background-color: #000;
     padding: 15px;
-    width: 100px;
+    min-width: 200px;
     position: absolute;
     opacity: 0;
     visibility: hidden;

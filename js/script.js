@@ -28,10 +28,10 @@ const isMmobile = {
 if (isMmobile.any()) {
 	document.body.classList.add('_touch');
 
-	var btnContainer = document.getElementsByClassName("menu__footer");
-	var btns = btnContainer.getElementsByClassName("menu__list");
-	for (var i = 0; i < btns.length; i++) {
-		btns[i].addEventListener("click", function() {
+	var menu__footerContainer = document.getElementsByClassName("menu__footer");
+	var menu__lists = menu__footerContainer.getElementsByClassName("menu__list");
+	for (var i = 0; i < menu__lists.length; i++) {
+		menu__lists[i].addEventListener("click", function() {
 		  var current = document.getElementsByClassName("_active");
 	if (current.length > 0) {
 	current[0].className = current[0].className.replace("_active", "");

@@ -38,9 +38,9 @@ const isMmobile = {
 // 		}
 // 	}
 var footer = document.getElementById(".menu__title");
-var btns = footer.getElementsByClassName("menu__list");
-for (var i = 0; i < btns.length; i++) {
-	btns[i].addEventListener("click", function() {
+var menu__lists = footer.getElementsByClassName("menu__list");
+for (var i = 0; i < menu__lists.length; i++) {
+	menu__lists[i].addEventListener("click", function() {
 	var current = document.getElementsByClassName("_active");
 	current[0].className = current[0].className.replace("_active", "");
 	this.className += "_active";

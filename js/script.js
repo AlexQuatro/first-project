@@ -28,7 +28,7 @@ const isMmobile = {
 if (isMmobile.any()) {
 	document.body.classList.add('_touch');
 
-	var btnContainer = document.getElementById("menu__footer");
+	var btnContainer = document.getElementsByClassName("menu__footer");
 	var btns = btnContainer.getElementsByClassName("menu__list");
 	for (var i = 0; i < btns.length; i++) {
 		btns[i].addEventListener("click", function() {

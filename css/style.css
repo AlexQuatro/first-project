@@ -1495,8 +1495,8 @@ body._lock {
   }
   body._touch .menu__link {
     -webkit-box-flex: 1;
-        -ms-flex: 1 1 auto;
-            flex: 1 1 auto;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
   }
   body._touch .menu__footer > li._active .menu__list {
     opacity: 1;

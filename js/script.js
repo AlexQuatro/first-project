@@ -28,24 +28,17 @@ const isMmobile = {
 if (isMmobile.any()) {
 	document.body.classList.add('_touch');
 
- 	let menuArrows = document.querySelectorAll(".menu__title");
- 	if (menuArrows.length>0) {
- 		for (let index = 0; index < menuArrows.length; index++) {
- 			const menuArrow = menuArrows[index];
- 			menuArrow.addEventListener("click", function (e) {
- 				menuArrow.parentElement.classList.toggle("_active");
- 			})
- 		}
- 	}
-var footer = document.getElementById(".menu__title");
-var menu__lists = footer.getElementsByClassName("menu__list");
-for (var i = 0; i < menu__lists.length; i++) {
-	menu__lists[i].addEventListener("click", function() {
-	var current = document.getElementsByClassName("_active");
-	current[0].className = current[0].className.replace("_active", "");
-	this.className += "_active";
-	});
-}
+	 var footer = document.getElementById("menu__footer");
+	 var menu__lists = footer.getElementsByClassName("menu__list");
+	 for (var i = 0; i < menu__lists.length; i++) {
+		menu__lists[i].addEventListener("click", function() {
+	   var current = document.getElementsByClassName("_active");
+	   if (current.length > 0) { 
+		 current[0].className = current[0].className.replace(" _active", "");
+	   }
+	   this.className += " _active";
+	   });
+	 }
 } else {
 	document.body.classList.add('_pc');
 }

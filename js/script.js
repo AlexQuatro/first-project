@@ -28,15 +28,15 @@ const isMmobile = {
 if (isMmobile.any()) {
 	document.body.classList.add('_touch');
 
-// 	let menuArrows = document.querySelectorAll(".menu__title");
-// 	if (menuArrows.length>0) {
-// 		for (let index = 0; index < menuArrows.length; index++) {
-// 			const menuArrow = menuArrows[index];
-// 			menuArrow.addEventListener("click", function (e) {
-// 				menuArrow.parentElement.classList.toggle("_active");
-// 			})
-// 		}
-// 	}
+ 	let menuArrows = document.querySelectorAll(".menu__title");
+ 	if (menuArrows.length>0) {
+ 		for (let index = 0; index < menuArrows.length; index++) {
+ 			const menuArrow = menuArrows[index];
+ 			menuArrow.addEventListener("click", function (e) {
+ 				menuArrow.parentElement.classList.toggle("_active");
+ 			})
+ 		}
+ 	}
 var footer = document.getElementById(".menu__title");
 var menu__lists = footer.getElementsByClassName("menu__list");
 for (var i = 0; i < menu__lists.length; i++) {

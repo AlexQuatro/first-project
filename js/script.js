@@ -34,9 +34,9 @@ if (isMmobile.any()) {
 		btns[i].addEventListener("click", function() {
 		  var current = document.getElementsByClassName("_active");
 	if (current.length > 0) {
-	current[0].className = current[0].className.replace(" _active", "");
+	current[0].className = current[0].className.replace("_active", "");
 	}
-	this.className += " _active";
+	this.className += "_active";
   });
 }
 

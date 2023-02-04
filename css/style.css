@@ -1505,7 +1505,6 @@ body._lock {
             transform: translate(0px, 0px);
     pointer-events: all;
     z-index: 3;
-    width: 100%;
   }
 }
 body._pc .menu__footer > li:hover .menu__list {

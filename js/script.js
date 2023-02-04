@@ -25,8 +25,8 @@ const isMmobile = {
 			isMmobile.Windows());
 	}
 };
-// if (isMmobile.any()) {
-// 	document.body.classList.add('_touch');
+if (isMmobile.any()) {
+	document.body.classList.add('_touch');
 
 // 	let menuArrows = document.querySelectorAll(".menu__title");
 // 	if (menuArrows.length>0) {

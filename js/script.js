@@ -28,17 +28,18 @@ const isMmobile = {
 if (isMmobile.any()) {
 	document.body.classList.add('_touch');
 
-	 var footer = document.getElementById("menu__footer");
-	 var menu__lists = footer.getElementsByClassName("menu__list");
-	 for (var i = 0; i < menu__lists.length; i++) {
-		menu__lists[i].addEventListener("click", function() {
-	   var current = document.getElementsByClassName("_active");
-	   if (current.length > 0) { 
-		 current[0].className = current[0].className.replace(" _active", "");
-	   }
-	   this.className += " _active";
-	   });
-	 }
+	var btnContainer = document.getElementById("menu__footer");
+	var btns = btnContainer.getElementsByClassName("menu__list");
+	for (var i = 0; i < btns.length; i++) {
+		btns[i].addEventListener("click", function() {
+		  var current = document.getElementsByClassName("_active");
+	if (current.length > 0) {
+	current[0].className = current[0].className.replace(" _active", "");
+	}
+	this.className += " _active";
+  });
+}
+
 } else {
 	document.body.classList.add('_pc');
 }

@@ -27,8 +27,6 @@ const isMmobile = {
 };
 if (isMmobile.any()) {
 	document.body.classList.add('_touch');
-	let activeClass = document.querySelectorAll('_active');
-	console.log(activeClass);
 	let menuArrows = document.querySelectorAll('.menu__title');
 	if (menuArrows.length > 0) {
 	  for (let index = 0; index < menuArrows.length; index++) {
@@ -36,10 +34,8 @@ if (isMmobile.any()) {
 		menuArrow.addEventListener("click", function (e) {
 		  menuArrow.parentElement.classList.toggle('_active');
 		})
-		console.log(menuArrow);
 	  }
 	}
-	console.log(menuArrows);
   } 
   else {
 	document.body.classList.add('_pc');

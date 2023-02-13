@@ -42,7 +42,6 @@ if (isMmobile.any()) {
 			})
 		}
 	} 
-}
 } else {
 	document.body.classList.add('_pc');
 };

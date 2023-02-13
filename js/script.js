@@ -27,7 +27,7 @@ const isMmobile = {
 };
 if (isMmobile.any()) {
 	document.body.classList.add('_touch');
-	let menuArrows = document.querySelectorAll('.menu__arrow');
+	let menuArrows = document.querySelectorAll('.menu__title');
 	if (menuArrows.length>0) {
 		for (let index = 0; index < menuArrows.length; index++) {
 			const menuArrow = menuArrows[index];

@@ -27,15 +27,22 @@ const isMmobile = {
 };
 if (isMmobile.any()) {
 	document.body.classList.add('_touch');
-	let menuArrows = document.querySelectorAll('.menu__title');
+	let menuArrows = document.querySelectorAll('.menu__arrow');
 	if (menuArrows.length>0) {
 		for (let index = 0; index < menuArrows.length; index++) {
-			const menuArrow = menuArrows[index];
-			menuArrow.addEventListener("click", function (e) {
-				menuArrow.parentElement.classList.toggle('_active');
+			menuArrows[index].addEventListener('click', (e) => {
+				if (!menuArrows[index].parentElement.className.includes('_active')){
+					menuArrows[index].parentElement.className += '_active'
+				}
+				for (let x = 0; x < menuArrows.length; x++) {
+					if (menuArrows[index] !== menuArrows[x]) {
+						menuArrows[index].parentElement.className.replaceAll('_active', '')
+					}
+				}
 			})
 		}
-	}
+	} 
+}
 } else {
 	document.body.classList.add('_pc');
 };

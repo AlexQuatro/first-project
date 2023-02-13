@@ -27,22 +27,23 @@ const isMmobile = {
 };
 if (isMmobile.any()) {
 	document.body.classList.add('_touch');
-
-	var menu__footerContainer = document.getElementsByClassName("menu__footer");
-	var menu__lists = menu__footerContainer.getElementsByClassName("menu__list");
-	for (var i = 0; i < menu__lists.length; i++) {
-		menu__lists[i].addEventListener("click", function() {
-		  var current = document.getElementsByClassName("_active");
-	if (current.length > 0) {
-	current[0].className = current[0].className.replace("_active", "");
+	let activeClass = document.querySelectorAll('_active');
+	console.log(activeClass);
+	let menuArrows = document.querySelectorAll('.menu__title');
+	if (menuArrows.length > 0) {
+	  for (let index = 0; index < menuArrows.length; index++) {
+		const menuArrow = menuArrows[index];
+		menuArrow.addEventListener("click", function (e) {
+		  menuArrow.parentElement.classList.toggle('_active');
+		})
+		console.log(menuArrow);
+	  }
 	}
-	this.className += "_active";
-  });
-}
-
-} else {
+	console.log(menuArrows);
+  } 
+  else {
 	document.body.classList.add('_pc');
-}
+  };
 const iconMenu = document.querySelector('.header__icon');
 const menuBody = document.querySelector('.header__body');
 if (iconMenu) {
